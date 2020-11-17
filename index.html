@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hyejin Jang : Work</title>
+</head>
+<body onload="showClock()">
+  <header id="mainhead" class="port-header" role="banner">
+    <div clsss="container-H">
+      <div id="switch" class="port-title">
+        <a href="index.html" rel="mode" title="Hyejin-Jang">
+          <img src="pic/logo-green" alt="switching-mode" width="90">
+        </a>
+      </div>
+      <nav class="header-right">
+        <ul class>
+          <li><a href="">about</a></li>
+          <li><a href="index.html">work</a></li>
+        </ul>
+      </nav>
+      <div class="header-left">
+        <a href="">HYEJIN JANG</a>
+      </div>
+    </div>
+  </header>
+  <div class="containter">
+    <section class="item item-left">
+      <p>under construction</p>
+      <div class = "h1-clock"></div>
+      <script type="text/javascript">
+      const clock = document.querySelector('.h1-clock');
+
+
+    function getTime(){
+      const time = new Date();
+      const hour = time.getHours();
+      const minutes = time.getMinutes();
+      const seconds = time.getSeconds();
+      //clock.innerHTML = hour +":" + minutes + ":"+seconds;
+      clock.innerHTML = `${hour<10 ? `0${hour}`:hour}:${minutes<10 ? `0${minutes}`:minutes}:${seconds<10 ? `0${seconds}`:seconds}`
+    }
+
+
+    function init(){
+      setInterval(getTime, 1000);
+    }
+
+    init();
+
+    </script>
+    </section>
+    <section class="item item-right">
+    </section>
+
+  </div>
+
+</body>
+</html>
